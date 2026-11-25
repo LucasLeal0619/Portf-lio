@@ -11,7 +11,6 @@ Construído só com **HTML, CSS e JavaScript**, sem frameworks, dependências ou
 ## Recursos
 
 - Tema escuro (padrão) e claro, com a preferência salva em `localStorage`
-- Português e inglês, com a preferência salva (também é possível usar `?lang=en` na URL)
 - Menu mobile acessível, rolagem suave e indicação da seção ativa
 - Animações de entrada com `IntersectionObserver`; o conteúdo continua visível se o JS falhar
 - Filtro de projetos por categoria e modal de estudo de caso (`<dialog>` nativo, com foco gerenciado)
@@ -33,8 +32,7 @@ Portf-lio/
 │   └── responsive.css    # Ajustes por faixa de tela
 ├── js/
 │   ├── config.js         # ← Seus dados editáveis (LinkedIn, e-mail, currículo, formação)
-│   ├── translations.js   # Textos em inglês
-│   ├── main.js           # Tema, idioma, menu, filtros, modal, rolagem
+│   ├── main.js           # Tema, menu, filtros, modal, rolagem
 │   └── animations.js     # Revelação na rolagem e efeito spotlight
 ├── assets/
 │   ├── images/           # Foto, imagem Open Graph e futuras imagens de projetos
@@ -72,29 +70,17 @@ LinkedIn, e-mail e currículo ficam em um único arquivo. Um campo vazio (`''`) 
 window.PORTFOLIO_CONFIG = {
   linkedin: 'https://www.linkedin.com/in/lucas-leal-5221542a2',
   email: 'lucaseduleal@gmail.com',
-  resume: { pt: 'assets/documents/Curriculo_Lucas_Leal.pdf', en: '' }
+  resume: 'assets/documents/Curriculo_Lucas_Leal.pdf'
 };
 ```
 
-- **Currículo:** o PDF fica em `assets/documents/Curriculo_Lucas_Leal.pdf`. Com `en` vazio, a versão em português também é oferecida no idioma inglês, com o rótulo "Résumé (PT)".
+- **Currículo:** o PDF fica em `assets/documents/Curriculo_Lucas_Leal.pdf`.
 - **Privacidade:** a versão publicada do currículo não traz telefone. Ao substituir o PDF, mantenha fora dele os dados que não devem ficar públicos.
 - **LinkedIn e Credly** também aparecem no array `sameAs` do JSON-LD no `<head>` do `index.html`. Se algum mudar, atualize nos dois lugares.
 
 ### Textos
 
-- **Português:** edite direto no `index.html`.
-- **Inglês:** edite a chave correspondente em `js/translations.js`. Cada elemento traduzível tem um atributo `data-i18n="chave"`.
-
-Para adicionar um texto traduzível:
-
-```html
-<p data-i18n="minha.chave">Texto em português</p>
-```
-
-```js
-// js/translations.js → en
-'minha.chave': 'Text in English',
-```
+O site é só em português. Os textos ficam direto no `index.html`; os poucos avisos gerados pelo JavaScript (menu, filtros, cópia do e-mail) ficam no objeto `TEXT`, no início de `js/main.js`.
 
 ### Projetos
 
@@ -154,8 +140,7 @@ Se o hash não bater, o navegador bloqueia o script. O site continua utilizável
 
 | Decisão | Motivo |
 | --- | --- |
-| Conteúdo em português no HTML; inglês em `translations.js` | A página é indexável e legível sem JavaScript; a tradução é uma melhoria, não um requisito para ler |
-| `data-i18n` com `textContent` (nunca `innerHTML`) | Sem risco de injeção de HTML; as traduções são apenas texto |
+| Todo o conteúdo escrito no HTML | A página é indexável e legível sem JavaScript |
 | Animações ocultam elementos só quando o JS confirma o `IntersectionObserver` | Se o script falhar, nada fica invisível |
 | `content-visibility: auto` nas seções | Reduziu o tempo de bloqueio no mobile de cerca de 1 s para menos de 200 ms (Lighthouse, CPU 4× mais lenta) |
 | `<dialog>` nativo no modal | Foco preso, tecla Esc e backdrop já são nativos e acessíveis |

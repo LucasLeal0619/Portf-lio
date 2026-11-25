@@ -8,8 +8,16 @@
 
   var root = document.documentElement;
   var CONFIG = window.PORTFOLIO_CONFIG || {};
-  var I18N = window.PORTFOLIO_I18N || { en: {}, ui: { pt: {}, en: {} } };
-  var state = { lang: 'pt' };
+
+  // Textos gerados pelo JavaScript (avisos e rótulos de acessibilidade)
+  var TEXT = {
+    menuOpen: 'Abrir menu',
+    menuClose: 'Fechar menu',
+    copied: 'E-mail copiado para a área de transferência.',
+    copyFailed: 'Não foi possível copiar. Selecione o endereço manualmente.',
+    filterAll: 'Exibindo todos os {n} projetos.',
+    filterSome: 'Exibindo {n} projeto(s) em {c}.'
+  };
 
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
@@ -20,8 +28,7 @@
   };
 
   function ui(key) {
-    var dict = I18N.ui && I18N.ui[state.lang];
-    return (dict && dict[key]) || (I18N.ui && I18N.ui.pt && I18N.ui.pt[key]) || '';
+    return TEXT[key] || '';
   }
 
   function safe(name, fn) {
@@ -39,16 +46,11 @@
     return /^(https?:|mailto:)/i.test(url) || /^[\w./-]+$/.test(url);
   }
 
-  function resumeHref() {
-    var r = CONFIG.resume || {};
-    return (state.lang === 'en' && r.en) ? r.en : (r.pt || '');
-  }
-
   function applyConfig() {
     var links = {
       linkedin: CONFIG.linkedin || '',
       email: CONFIG.email ? 'mailto:' + CONFIG.email : '',
-      resume: resumeHref()
+      resume: CONFIG.resume || ''
     };
 
     $$('[data-config-link]').forEach(function (el) {
@@ -68,81 +70,6 @@
 
     $$('[data-config-wrap]').forEach(function (el) {
       el.hidden = !get(CONFIG, el.getAttribute('data-config-wrap'));
-    });
-  }
-
-  /* ---------- Idioma ---------- */
-  var originals = new WeakMap();
-  var attrOriginals = new WeakMap();
-  var meta = {
-    title: document.title,
-    description: ($('meta[name="description"]') || {}).content || ''
-  };
-
-  function parseAttrSpec(spec) {
-    return spec.split(';').map(function (pair) {
-      var i = pair.indexOf(':');
-      return { attr: pair.slice(0, i).trim(), key: pair.slice(i + 1).trim() };
-    }).filter(function (p) { return p.attr && p.key; });
-  }
-
-  function translateTree(scope, lang) {
-    var dict = I18N.en || {};
-
-    $$('[data-i18n]', scope).forEach(function (el) {
-      if (!originals.has(el)) originals.set(el, el.textContent);
-      var key = el.getAttribute('data-i18n');
-      el.textContent = (lang === 'en' && dict[key]) ? dict[key] : originals.get(el);
-    });
-
-    $$('[data-i18n-attr]', scope).forEach(function (el) {
-      var saved = attrOriginals.get(el);
-      if (!saved) { saved = {}; attrOriginals.set(el, saved); }
-      parseAttrSpec(el.getAttribute('data-i18n-attr')).forEach(function (p) {
-        if (!(p.attr in saved)) saved[p.attr] = el.getAttribute(p.attr) || '';
-        el.setAttribute(p.attr, (lang === 'en' && dict[p.key]) ? dict[p.key] : saved[p.attr]);
-      });
-    });
-  }
-
-  function setLang(lang, persist) {
-    state.lang = lang === 'en' ? 'en' : 'pt';
-    var en = state.lang === 'en';
-
-    translateTree(document, state.lang);
-    root.setAttribute('lang', en ? 'en' : 'pt-BR');
-    document.title = en ? I18N.en['meta.title'] : meta.title;
-    var desc = $('meta[name="description"]');
-    if (desc) desc.setAttribute('content', en ? I18N.en['meta.description'] : meta.description);
-
-    var btn = $('#lang-toggle');
-    if (btn) {
-      btn.setAttribute('aria-label', ui('langSwitch'));
-      btn.setAttribute('lang', en ? 'pt-BR' : 'en'); // o rótulo está no idioma de destino
-      var label = $('.lang-btn__label', btn);
-      if (label) label.textContent = ui('langLabel');
-    }
-
-    var menuBtn = $('#menu-toggle');
-    if (menuBtn) {
-      var open = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-label', ui(open ? 'menuClose' : 'menuOpen'));
-    }
-
-    applyConfig();
-    if (modal.current) modal.render(modal.current);
-    if (persist) storage.set('ll-lang', state.lang);
-  }
-
-  function initLang() {
-    var param = null;
-    try { param = new URLSearchParams(location.search).get('lang'); } catch (e) { /* navegador antigo */ }
-    var initial = param || storage.get('ll-lang') || 'pt';
-    if (initial === 'en') setLang('en', false); else applyConfig();
-
-    var btn = $('#lang-toggle');
-    if (btn) btn.addEventListener('click', function () {
-      setLang(state.lang === 'en' ? 'pt' : 'en', true);
     });
   }
 
@@ -418,7 +345,7 @@
   }
 
   safe('modal', initModal);
-  safe('idioma', initLang);
+  safe('configuração', applyConfig);
   safe('tema', initTheme);
   safe('menu', initMenu);
   safe('rolagem', initScroll);

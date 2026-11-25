@@ -166,7 +166,6 @@
 
 /* ---------- Telas muito estreitas ---------- */
 @media (max-width: 360px) {
-  .lang-btn .icon { display: none; }
   .header__actions { gap: 6px; }
 }
 

@@ -10,9 +10,5 @@ window.PORTFOLIO_CONFIG = {
   email: 'lucaseduleal@gmail.com',
 
   // Caminho relativo do currículo em PDF (em assets/documents/).
-  // Se 'en' ficar vazio, a versão em português é usada também no idioma inglês.
-  resume: {
-    pt: 'assets/documents/Curriculo_Lucas_Leal.pdf',
-    en: ''
-  }
+  resume: 'assets/documents/Curriculo_Lucas_Leal.pdf'
 };
