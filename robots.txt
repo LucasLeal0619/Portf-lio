@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lucasleal0619.github.io/Portf-lio/sitemap.xml

@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP: se editar o script inline de tema abaixo, recalcule o hash (instruções no README) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-cTJ7zprDbn5agQ46MAtYirM+L8sYIg5HvL7rnCtWWjA='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Lucas Leal — Desenvolvedor de Software | Back-end &amp; Full Stack</title>
+  <meta name="description" content="Lucas Leal, desenvolvedor de software em Brasília com foco em Back-end e Full Stack: APIs REST, integrações de pagamento PIX, KYC e automação com Node.js, TypeScript, PHP/Laravel e PostgreSQL.">
+  <meta name="author" content="Lucas Eduardo Ferreira Leal">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://lucasleal0619.github.io/Portf-lio/">
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="Lucas Leal">
+  <meta property="og:title" content="Lucas Leal — Desenvolvedor de Software | Back-end & Full Stack">
+  <meta property="og:description" content="APIs REST, integrações e automação para aplicações web e plataformas fintech. Estudos de caso de projetos profissionais, institucionais e pessoais.">
+  <meta property="og:url" content="https://lucasleal0619.github.io/Portf-lio/">
+  <meta property="og:image" content="https://lucasleal0619.github.io/Portf-lio/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lucas Leal — Desenvolvedor de Software, Back-end e Full Stack">
+  <meta property="profile:first_name" content="Lucas">
+  <meta property="profile:last_name" content="Leal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lucas Leal — Desenvolvedor de Software | Back-end & Full Stack">
+  <meta name="twitter:description" content="APIs REST, integrações e automação para aplicações web e plataformas fintech. Estudos de caso de projetos profissionais, institucionais e pessoais.">
+  <meta name="twitter:image" content="https://lucasleal0619.github.io/Portf-lio/assets/images/og-image.png">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/Foto_Lucas_Leal.webp" as="image" type="image/webp">
+
+  <!-- Tema aplicado antes da pintura para evitar flash de cor -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      if ('IntersectionObserver' in window && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+        root.classList.add('anim-ready');
+        setTimeout(function () { if (!root.classList.contains('anim-live')) root.classList.remove('anim-ready'); }, 2500);
+      }
+      try {
+        var t = localStorage.getItem('ll-theme');
+        if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t);
+      } catch (e) { /* armazenamento indisponível: mantém o tema escuro */ }
+      if (root.getAttribute('data-theme') === 'light') document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fafafa');
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lucas Eduardo Ferreira Leal",
+    "alternateName": "Lucas Leal",
+    "jobTitle": "Desenvolvedor de Software — Back-end & Full Stack",
+    "description": "Desenvolvedor de software com experiência em aplicações web e plataformas fintech, com foco em Back-end, APIs REST, integrações e automação.",
+    "url": "https://lucasleal0619.github.io/Portf-lio/",
+    "image": "https://lucasleal0619.github.io/Portf-lio/assets/images/Foto_Lucas_Leal.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "Brasília", "addressRegion": "DF", "addressCountry": "BR" },
+    "sameAs": [
+      "https://github.com/LucasLeal0619",
+      "https://www.linkedin.com/in/lucas-leal-5221542a2",
+      "https://www.credly.com/users/lucas-leal.0b1dd383/badges"
+    ],
+    "worksFor": { "@type": "Organization", "name": "LOØR Venture Capital" },
+    "alumniOf": { "@type": "EducationalOrganization", "name": "Instituto Federal de Brasília" },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "AWS Academy Graduate - Cloud Architecting - Training Badge",
+        "credentialCategory": "badge",
+        "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services Training and Certification" },
+        "url": "https://www.credly.com/badges/780c78b6-8be4-4b17-b005-ce69655f09c8"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "AWS Academy Graduate - Cloud Foundations - Training Badge",
+        "credentialCategory": "badge",
+        "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services Training and Certification" },
+        "url": "https://www.credly.com/badges/e8bd3562-819b-45bc-aad5-487b95e1ea8e"
+      }
+    ],
+    "knowsAbout": ["Node.js", "TypeScript", "PHP", "Laravel", "PostgreSQL", "MySQL", "APIs REST", "Webhooks", "Integrações de pagamento PIX", "KYC", "Vue.js", "React", "Docker", "Desenvolvimento Back-end", "Desenvolvimento Full Stack"]
+  }
+  </script>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</head>
+<body>
+  <!-- Ícones reutilizáveis -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Pular para o conteúdo</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="topo">
+    <div class="header__inner container">
+      <a class="brand" href="#inicio">
+        <span class="brand__mark" aria-hidden="true">LL</span>
+        <span class="brand__name">Lucas Leal</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal" data-i18n-attr="aria-label:a11y.nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a class="nav__link" href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+          <li><a class="nav__link" href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+          <li><a class="nav__link" href="#competencias" data-i18n="nav.skills">Competências</a></li>
+          <li><a class="nav__link" href="#formacao" data-i18n="nav.education">Formação</a></li>
+          <li><a class="nav__link" href="#credenciais" data-i18n="nav.credentials">Credenciais</a></li>
+          <li><a class="nav__link" href="#contato" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn lang-btn" type="button" id="lang-toggle" aria-label="EN — Switch to English">
+          <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+          <span class="lang-btn__label">EN</span>
+        </button>
+        <button class="icon-btn" type="button" id="theme-toggle" aria-label="Alternar tema claro/escuro" data-i18n-attr="aria-label:a11y.theme">
+          <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" id="menu-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu">
+          <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon--close" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="status-pill">
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">Desenvolvedor Back-end na LOØR Venture Capital</span>
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__name">Lucas Leal</span>
+            <span class="hero__role"><span data-i18n="hero.role">Desenvolvedor de Software</span> <span class="hero__role-stack">Back-end &amp; Full Stack</span></span>
+          </h1>
+          <p class="hero__tagline mono" data-i18n="hero.tagline">APIs · Integrações · Automação</p>
+
+          <p class="hero__lead" data-i18n="hero.lead">Desenvolvo APIs REST, integrações e automações para aplicações web e plataformas fintech — de pagamentos PIX e webhooks a fluxos de KYC — com foco em qualidade, segurança e resolução de problemas.</p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projetos">
+              <span data-i18n="hero.ctaProjects">Ver projetos</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-r"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#" data-config-link="resume" download hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              <span data-i18n="hero.ctaResume">Currículo</span>
+            </a>
+            <a class="icon-btn icon-btn--lg" href="https://github.com/LucasLeal0619" target="_blank" rel="noopener noreferrer" aria-label="GitHub (abre em nova aba)" data-i18n-attr="aria-label:a11y.github">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            </a>
+            <a class="icon-btn icon-btn--lg" href="#" data-config-link="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (abre em nova aba)" data-i18n-attr="aria-label:a11y.linkedin" hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="card photo-card spotlight">
+            <picture>
+              <source srcset="assets/images/Foto_Lucas_Leal.webp" type="image/webp">
+              <img class="photo-card__img" src="assets/images/Foto_Lucas_Leal.png" width="256" height="256"
+                   alt="Foto de Lucas Leal, homem jovem de cabelo escuro curto, vestindo camisa polo cinza" data-i18n-attr="alt:hero.photoAlt"
+                   fetchpriority="high" decoding="async">
+            </picture>
+            <figcaption class="photo-card__caption">
+              <span class="photo-card__name">Lucas Eduardo Ferreira Leal</span>
+              <span class="photo-card__meta mono">Brasília, DF · Brasil</span>
+            </figcaption>
+          </figure>
+
+          <div class="card code-card spotlight" role="img" aria-label="Resumo do perfil em formato de resposta de API: Lucas Leal, desenvolvedor Back-end em Brasília, stack Node.js, TypeScript e PostgreSQL." data-i18n-attr="aria-label:hero.codeAlt">
+            <div class="code-card__bar" aria-hidden="true">
+              <span class="code-card__method">GET</span>
+              <span class="code-card__path">/v1/profile/lucas-leal</span>
+              <span class="code-card__status"><span class="dot dot--ok"></span>200 OK</span>
+            </div>
+<pre class="code-card__body" aria-hidden="true"><code>{
+  <span class="k">"name"</span>: <span class="s">"Lucas Leal"</span>,
+  <span class="k">"role"</span>: <span class="s">"<span data-i18n="code.role">Desenvolvedor Back-end</span>"</span>,
+  <span class="k">"location"</span>: <span class="s">"Brasília, DF"</span>,
+  <span class="k">"stack"</span>: [<span class="s">"Node.js"</span>, <span class="s">"TypeScript"</span>, <span class="s">"PostgreSQL"</span>],
+  <span class="k">"focus"</span>: [
+    <span class="s">"<span data-i18n="code.f1">APIs REST</span>"</span>,
+    <span class="s">"<span data-i18n="code.f2">integrações</span>"</span>,
+    <span class="s">"<span data-i18n="code.f3">automação</span>"</span>
+  ],
+  <span class="k">"fullStack"</span>: <span class="b">true</span><span class="caret"></span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__index mono">01 <span aria-hidden="true">/</span> <span data-i18n="nav.about">Sobre</span></p>
+          <h2 class="section__title" id="sobre-title" data-i18n="about.title">Back-end primeiro. Full Stack quando o projeto pede.</h2>
+        </header>
+
+        <div class="about-grid">
+          <article class="card about-main reveal spotlight">
+            <p data-i18n="about.p1">Sou desenvolvedor de software em Brasília, com experiência profissional em aplicações web e plataformas fintech. Hoje atuo como Desenvolvedor Back-end na LOØR Venture Capital, construindo APIs REST, integrações de pagamento e fluxos de KYC.</p>
+            <p data-i18n="about.p2">Trabalho principalmente com Node.js, TypeScript e PostgreSQL, e também com PHP/Laravel, Vue.js, React e MySQL — o que me permite atuar no Full Stack quando o projeto pede. Testes de APIs, consultas SQL, homologação e deploy fazem parte da rotina, não da etapa final.</p>
+            <div class="about-main__interests">
+              <h3 class="card__label mono" data-i18n="about.interestsLabel">Interesses</h3>
+              <ul class="tag-cloud">
+                <li data-i18n="about.i1">Arquitetura de software</li>
+                <li data-i18n="about.i2">Segurança</li>
+                <li data-i18n="about.i3">Inteligência artificial</li>
+                <li data-i18n="about.i4">Engenharia de software</li>
+                <li data-i18n="about.i5">Automação</li>
+                <li data-i18n="about.i6">Produtos digitais</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card about-focus reveal spotlight">
+            <h3 class="card__label mono" data-i18n="about.focusLabel">Foco atual</h3>
+            <p class="about-focus__big" data-i18n="about.focusTitle">Pagamentos, KYC e APIs em uma fintech</p>
+            <p class="muted" data-i18n="about.focusText">PIX, cobranças e webhooks via Asaas, fluxos de KYC com BigDataCorp e soluções whitelabel.</p>
+          </article>
+
+          <article class="card about-edu reveal spotlight">
+            <h3 class="card__label mono" data-i18n="about.eduLabel">Formação</h3>
+            <ul class="mini-list">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>
+                <span><strong>Faculdade Senac-DF</strong> · <span data-i18n="about.edu2">ADS, conclusão prevista em dez 2027</span></span>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>
+                <span><strong>IFB</strong> · <span data-i18n="about.edu1">Técnico em Informática, concluído em 2025</span></span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card about-traits reveal spotlight">
+            <h3 class="card__label mono" data-i18n="about.traitsLabel">Como trabalho</h3>
+            <ul class="traits">
+              <li class="trait">
+                <h4 class="trait__title" data-i18n="about.t1">Colaboração</h4>
+                <p data-i18n="about.t1d">Investigação de problemas, revisão de código e decisões técnicas junto ao Tech Lead.</p>
+              </li>
+              <li class="trait">
+                <h4 class="trait__title" data-i18n="about.t2">Análise</h4>
+                <p data-i18n="about.t2d">Diagnóstico de inconsistências de dados e de limitações de ambiente antes de propor a solução.</p>
+              </li>
+              <li class="trait">
+                <h4 class="trait__title" data-i18n="about.t3">Qualidade</h4>
+                <p data-i18n="about.t3d">Testes de APIs, testes automatizados, homologação e validação em produção.</p>
+              </li>
+              <li class="trait">
+                <h4 class="trait__title" data-i18n="about.t4">Segurança</h4>
+                <p data-i18n="about.t4d">Autenticação, fluxos de KYC e auditoria com proteção contra falsificação de cabeçalhos.</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIÊNCIA ============ -->
+    <section class="section" id="experiencia" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__index mono">02 <span aria-hidden="true">/</span> <span data-i18n="nav.experience">Experiência</span></p>
+          <h2 class="section__title" id="exp-title" data-i18n="exp.title">Trajetória profissional.</h2>
+        </header>
+
+        <ol class="timeline">
+          <!-- LOØR Venture Capital: dois cargos na mesma empresa -->
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"><span></span></div>
+            <article class="card exp-card spotlight">
+              <header class="exp-company">
+                <p class="exp-company__name">LOØR Venture Capital</p>
+                <p class="exp-company__span mono"><time datetime="2026-04" data-i18n="exp.apr26">Abr 2026</time> — <span data-i18n="common.present">Atual</span></p>
+              </header>
+
+              <header class="exp-card__head">
+                <div>
+                  <h3 class="exp-card__role" data-i18n="exp.loor.role">Desenvolvedor Back-end</h3>
+                  <p class="exp-card__context" data-i18n="exp.loor.context">Plataforma fintech de investimento coletivo.</p>
+                </div>
+                <p class="exp-card__period mono">
+                  <time datetime="2026-07" data-i18n="exp.jul26">Jul 2026</time> — <span class="tag-current" data-i18n="common.present">Atual</span>
+                </p>
+              </header>
+
+              <div class="exp-card__groups">
+                <div class="exp-group">
+                  <h4 class="exp-group__title mono" data-i18n="exp.loor.g1">APIs e pagamentos</h4>
+                  <ul>
+                    <li data-i18n="exp.loor.a1">APIs REST em Node.js e TypeScript, com PostgreSQL</li>
+                    <li data-i18n="exp.loor.a2">Integração com Asaas: PIX, cobranças, QR Codes e webhooks</li>
+                    <li data-i18n="exp.loor.a3">Confirmação automática de pagamentos</li>
+                  </ul>
+                </div>
+                <div class="exp-group">
+                  <h4 class="exp-group__title mono" data-i18n="exp.loor.g2">KYC e produto</h4>
+                  <ul>
+                    <li data-i18n="exp.loor.a4">Evolução de fluxos de KYC integrados ao BigDataCorp</li>
+                    <li data-i18n="exp.loor.a5">Desenvolvimento e evolução de soluções whitelabel</li>
+                  </ul>
+                </div>
+                <div class="exp-group">
+                  <h4 class="exp-group__title mono" data-i18n="exp.loor.g3">Qualidade e colaboração</h4>
+                  <ul>
+                    <li data-i18n="exp.loor.a6">Testes de APIs e consultas SQL</li>
+                    <li data-i18n="exp.loor.a7">Homologação e deploy em produção</li>
+                    <li data-i18n="exp.loor.a8">Investigação de problemas, revisão de código e decisões técnicas com o Tech Lead</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                <li>Node.js</li><li>TypeScript</li><li>AdonisJS</li><li>PostgreSQL</li><li>RabbitMQ</li><li>Swagger</li><li>Git</li>
+              </ul>
+
+              <div class="exp-role-prev">
+                <header class="exp-card__head">
+                  <div>
+                    <h3 class="exp-card__role exp-card__role--sm" data-i18n="exp.res.role">Desenvolvedor Full Stack — Residência Tecnológica</h3>
+                    <p class="exp-card__context" data-i18n="exp.res.context">Programa Bolsa Futuro Digital, na LOØR Venture Capital.</p>
+                  </div>
+                  <p class="exp-card__period mono">
+                    <time datetime="2026-04" data-i18n="exp.apr26">Abr 2026</time> — <time datetime="2026-07" data-i18n="exp.jul26">Jul 2026</time>
+                  </p>
+                </header>
+                <div class="exp-group exp-group--flat">
+                  <ul>
+                    <li data-i18n="exp.res.a1">Desenvolvimento do MVP Brazil Fund Access, plataforma de captação e gestão de investimentos internacionais</li>
+                    <li data-i18n="exp.res.a2">APIs REST, modelagem de dados e fluxos de autenticação e KYC</li>
+                    <li data-i18n="exp.res.a3">Contribuição para mais de 30 telas e fluxos do MVP</li>
+                    <li data-i18n="exp.res.a4">CI/CD, homologação, deploy e resolução colaborativa de problemas</li>
+                  </ul>
+                </div>
+                <div class="exp-role-prev__foot">
+                  <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                    <li>React</li><li>Node.js</li><li>TypeScript</li><li>PostgreSQL</li>
+                  </ul>
+                  <button class="btn btn--sm btn--ghost" type="button" data-case="bfa">
+                    <span data-i18n="exp.res.case">Estudo de caso: Brazil Fund Access</span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- G4F / Senac-DF -->
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"><span></span></div>
+            <article class="card exp-card spotlight">
+              <header class="exp-company">
+                <p class="exp-company__name">G4F / Senac-DF</p>
+              </header>
+              <header class="exp-card__head">
+                <div>
+                  <h3 class="exp-card__role" data-i18n="exp.app.role">Jovem Aprendiz em Desenvolvimento de Software</h3>
+                  <p class="exp-card__context" data-i18n="exp.app.context">Programa de aprendizagem com atuação em desenvolvimento web Full Stack.</p>
+                </div>
+                <p class="exp-card__period mono">
+                  <time datetime="2026-02" data-i18n="exp.feb26">Fev 2026</time> — <span class="tag-current" data-i18n="common.present">Atual</span>
+                </p>
+              </header>
+
+              <div class="exp-card__groups exp-card__groups--2">
+                <div class="exp-group">
+                  <h4 class="exp-group__title mono" data-i18n="exp.app.g1">Desenvolvimento</h4>
+                  <ul>
+                    <li data-i18n="exp.app.a1">Aplicações web Full Stack com PHP/Laravel, Vue.js e MySQL</li>
+                    <li data-i18n="exp.app.a2">Autenticação, CRUDs e módulos administrativos</li>
+                    <li data-i18n="exp.app.a3">Integração entre Front-end, Back-end e banco de dados</li>
+                  </ul>
+                </div>
+                <div class="exp-group">
+                  <h4 class="exp-group__title mono" data-i18n="exp.app.g2">Ambiente e ferramentas</h4>
+                  <ul>
+                    <li data-i18n="exp.app.a4">Versionamento com Git</li>
+                    <li data-i18n="exp.app.a5">Configuração de ambientes com Docker</li>
+                    <li data-i18n="exp.app.a6">Diagnóstico de limitações de ambiente e adaptação de soluções para manter o desenvolvimento em andamento</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                <li>PHP</li><li>Laravel</li><li>Vue.js</li><li>MySQL</li><li>Docker</li><li>Git</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="section" id="projetos" aria-labelledby="proj-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__index mono">03 <span aria-hidden="true">/</span> <span data-i18n="nav.projects">Projetos</span></p>
+          <h2 class="section__title" id="proj-title" data-i18n="proj.title">Estudos de caso.</h2>
+          <p class="section__lead" data-i18n="proj.lead">Contexto, problema, solução e — principalmente — o que foi minha contribuição em cada projeto. Cada card indica se o trabalho é pessoal, profissional, institucional, acadêmico ou de hackathon.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrar projetos" data-i18n-attr="aria-label:proj.filterLabel">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true"><span data-i18n="proj.f.all">Todos</span><span class="filter__count" aria-hidden="true"></span></button>
+          <button class="filter" type="button" data-filter="backend" aria-pressed="false"><span>Back-end</span><span class="filter__count" aria-hidden="true"></span></button>
+          <button class="filter" type="button" data-filter="fullstack" aria-pressed="false"><span>Full Stack</span><span class="filter__count" aria-hidden="true"></span></button>
+          <button class="filter" type="button" data-filter="work" aria-pressed="false"><span data-i18n="proj.f.work">Profissional e institucional</span><span class="filter__count" aria-hidden="true"></span></button>
+          <button class="filter" type="button" data-filter="personal" aria-pressed="false"><span data-i18n="proj.f.personal">Pessoal</span><span class="filter__count" aria-hidden="true"></span></button>
+          <button class="filter" type="button" data-filter="learning" aria-pressed="false"><span data-i18n="proj.f.learning">Formação e hackathon</span><span class="filter__count" aria-hidden="true"></span></button>
+        </div>
+        <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+
+        <div class="projects">
+
+          <!-- 1. HackLab -->
+          <article class="card project project--featured reveal spotlight" data-tags="backend work" aria-labelledby="p-hacklab">
+            <div class="project__visual project__visual--report">
+              <p class="report__head mono"><span class="dot dot--ok" aria-hidden="true"></span> <span data-i18n="proj.hacklab.reportHead">Versão validada em 21/10/2026</span></p>
+              <dl class="report">
+                <div class="report__row">
+                  <dt data-i18n="proj.hacklab.rBack">Testes de Back-end</dt>
+                  <dd><span class="report__bar" aria-hidden="true"></span><span class="report__val">616/616</span></dd>
+                </div>
+                <div class="report__row">
+                  <dt data-i18n="proj.hacklab.rFront">Testes de Front-end</dt>
+                  <dd><span class="report__bar" aria-hidden="true"></span><span class="report__val">130/130</span></dd>
+                </div>
+                <div class="report__row">
+                  <dt data-i18n="proj.hacklab.rManual">Testes manuais</dt>
+                  <dd><span class="report__val" data-i18n="proj.hacklab.rManualVal">6 aprovados</span></dd>
+                </div>
+              </dl>
+              <p class="report__foot" data-i18n="proj.hacklab.reportFoot">Retrato daquela versão validada — não necessariamente o estado atual do projeto.</p>
+            </div>
+            <div class="project__body">
+              <ul class="project__meta">
+                <li class="badge badge--institutional" data-i18n="badge.institutional">Institucional</li>
+                <li class="badge badge--mode" data-i18n="badge.collab">Colaborativo</li>
+                <li class="project__period mono">2026</li>
+              </ul>
+              <p class="project__cat mono" data-i18n="proj.hacklab.cat">Plataforma de gestão de hackathons</p>
+              <h3 class="project__title" id="p-hacklab">HackLab</h3>
+              <p class="project__desc" data-i18n="proj.hacklab.desc">Centraliza a organização e a gestão de hackathons. Minha contribuição se concentra em segurança, autenticação, auditoria e infraestrutura.</p>
+              <div class="project__highlight">
+                <p class="project__label mono" data-i18n="proj.hacklab.hlLabel">Destaque técnico</p>
+                <p data-i18n="proj.hacklab.hl">Correção da identificação do IP real nas auditorias: suporte a IPv4 e IPv6, comunicação assinada entre proxy e Back-end e proteção contra falsificação de cabeçalhos.</p>
+              </div>
+              <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                <li>Vue.js</li><li>Laravel</li><li>PostgreSQL</li><li>Supabase</li><li>Sanctum</li><li>Netlify</li><li>Render</li>
+              </ul>
+              <button class="btn btn--sm btn--ghost project__more" type="button" data-case="hacklab">
+                <span data-i18n="proj.more">Ver estudo de caso</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              </button>
+            </div>
+            <div class="case" id="case-hacklab" hidden>
+              <dl class="case__meta">
+                <div><dt data-i18n="case.type">Tipo</dt><dd data-i18n="badge.institutional">Institucional</dd></div>
+                <div><dt data-i18n="case.mode">Trabalho</dt><dd data-i18n="badge.collab">Colaborativo</dd></div>
+                <div><dt data-i18n="case.period">Período</dt><dd>2026</dd></div>
+              </dl>
+              <dl class="case__grid">
+                <div><dt data-i18n="case.problem">Problema</dt><dd data-i18n="proj.hacklab.problem">Centralizar em um único sistema os processos de organização e gestão de hackathons, com controle de acesso e rastreabilidade das ações.</dd></div>
+                <div><dt data-i18n="case.solution">Solução</dt><dd data-i18n="proj.hacklab.solution">Plataforma com autenticação, gestão de participantes, controle de permissões e auditoria, sustentada por testes automatizados, integração contínua e implantação em nuvem.</dd></div>
+              </dl>
+              <h4 class="case__sub" data-i18n="case.contribution">Minha contribuição</h4>
+              <p class="case__text" data-i18n="proj.hacklab.contrib">Desenvolvimento e evolução técnica da plataforma, especialmente em segurança, autenticação, auditoria e infraestrutura.</p>
+              <h4 class="case__sub" data-i18n="case.challenge">Desafio técnico em destaque</h4>
+              <p class="case__text" data-i18n="proj.hacklab.challenge">As auditorias precisavam registrar o endereço IP real de quem executa cada ação. A correção envolveu:</p>
+              <ul class="case__list">
+                <li data-i18n="proj.hacklab.c1">Suporte a IPv4 e IPv6</li>
+                <li data-i18n="proj.hacklab.c2">Comunicação assinada entre proxy e Back-end</li>
+                <li data-i18n="proj.hacklab.c3">Proteção contra falsificação de cabeçalhos</li>
+                <li data-i18n="proj.hacklab.c4">Validação de segurança</li>
+                <li data-i18n="proj.hacklab.c5">Testes automatizados</li>
+                <li data-i18n="proj.hacklab.c6">Validação em produção</li>
+              </ul>
+              <h4 class="case__sub" data-i18n="case.results">Resultados</h4>
+              <ul class="kpis">
+                <li class="kpi"><span class="kpi__value">616/616</span><span class="kpi__label" data-i18n="proj.hacklab.k1">testes de Back-end aprovados</span></li>
+                <li class="kpi"><span class="kpi__value">130/130</span><span class="kpi__label" data-i18n="proj.hacklab.k2">testes de Front-end aprovados</span></li>
+                <li class="kpi"><span class="kpi__value">6</span><span class="kpi__label" data-i18n="proj.hacklab.k3">testes manuais aprovados</span></li>
+              </ul>
+              <p class="case__note" data-i18n="proj.hacklab.kNote">Indicadores da versão validada em 21 de outubro de 2026. Representam aquela versão, não necessariamente o estado atual do projeto.</p>
+              <h4 class="case__sub" data-i18n="common.techs">Tecnologias</h4>
+              <ul class="chips"><li>Vue.js</li><li>Laravel</li><li>PostgreSQL</li><li>Supabase</li><li>Sanctum</li><li>Netlify</li><li>Render</li></ul>
+            </div>
+          </article>
+
+          <!-- 2. SIPED -->
+          <article class="card project reveal spotlight" data-tags="work" aria-labelledby="p-siped">
+            <div class="project__visual" aria-hidden="true">
+              <svg class="viz viz--proposal" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet">
+                <g class="viz__layer"><rect x="20" y="16" width="104" height="38" rx="9"/><text x="72" y="40" text-anchor="middle" data-i18n="proj.siped.env1">amb. 1</text></g>
+                <g class="viz__layer"><rect x="148" y="16" width="104" height="38" rx="9"/><text x="200" y="40" text-anchor="middle" data-i18n="proj.siped.env2">amb. 2</text></g>
+                <g class="viz__layer"><rect x="276" y="16" width="104" height="38" rx="9"/><text x="328" y="40" text-anchor="middle" data-i18n="proj.siped.env3">amb. 3</text></g>
+                <path class="viz__link" d="M72 54 V76 H200 M328 54 V76 H200 M200 54 V96"/>
+                <g class="viz__layer viz__layer--on"><rect x="90" y="96" width="220" height="40" rx="9"/><text x="200" y="121" text-anchor="middle" data-i18n="proj.siped.backend">back-end compartilhado</text></g>
+                <path class="viz__link" d="M200 136 V160"/>
+                <g class="viz__layer"><rect x="130" y="160" width="140" height="38" rx="9"/><text x="200" y="184" text-anchor="middle" data-i18n="proj.siped.db">banco centralizado</text></g>
+                <text x="392" y="214" class="viz__label viz__tag" text-anchor="end" data-i18n="proj.siped.proposalTag">PROPOSTA</text>
+              </svg>
+            </div>
+            <div class="project__body">
+              <ul class="project__meta">
+                <li class="badge badge--institutional" data-i18n="badge.institutional">Institucional</li>
+                <li class="badge badge--mode" data-i18n="badge.collab">Colaborativo</li>
+                <li class="project__period mono">2026</li>
+              </ul>
+              <p class="project__cat mono" data-i18n="proj.siped.cat">Sistema Integrado Pedagógico</p>
+              <h3 class="project__title" id="p-siped">SIPED</h3>
+              <p class="project__desc" data-i18n="proj.siped.desc">Sistema voltado ao planejamento e à gestão de informações pedagógicas.</p>
+              <ul class="project__points">
+                <li data-i18n="proj.siped.h1">Análise de requisitos e evolução de funcionalidades</li>
+                <li data-i18n="proj.siped.h2">Auditoria de dados importados e investigação de inconsistências</li>
+                <li data-i18n="proj.siped.h3">Proposta de evolução arquitetural</li>
+              </ul>
+              <button class="btn btn--sm btn--ghost project__more" type="button" data-case="siped">
+                <span data-i18n="proj.more">Ver estudo de caso</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              </button>
+            </div>
+            <div class="case" id="case-siped" hidden>
+              <dl class="case__meta">
+                <div><dt data-i18n="case.type">Tipo</dt><dd data-i18n="badge.institutional">Institucional</dd></div>
+                <div><dt data-i18n="case.mode">Trabalho</dt><dd data-i18n="badge.collab">Colaborativo</dd></div>
+                <div><dt data-i18n="case.period">Período</dt><dd>2026</dd></div>
+              </dl>
+              <dl class="case__grid">
+                <div><dt data-i18n="case.problem">Problema</dt><dd data-i18n="proj.siped.problem">Organizar informações pedagógicas — cursos, eixos tecnológicos e dados importados — de forma consistente e confiável para o planejamento institucional.</dd></div>
+                <div><dt data-i18n="case.solution">Solução</dt><dd data-i18n="proj.siped.solution">Sistema institucional de planejamento e gestão pedagógica, com gestão de cursos e eixos tecnológicos e processos de importação de dados.</dd></div>
+              </dl>
+              <h4 class="case__sub" data-i18n="case.contribution">Minha contribuição</h4>
+              <ul class="case__list">
+                <li data-i18n="proj.siped.c1">Desenvolvimento e evolução de funcionalidades</li>
+                <li data-i18n="proj.siped.c2">Análise de requisitos</li>
+                <li data-i18n="proj.siped.c3">Auditoria e investigação de inconsistências</li>
+                <li data-i18n="proj.siped.c4">Organização de informações educacionais</li>
+                <li data-i18n="proj.siped.c5">Revisão de processos de importação</li>
+                <li data-i18n="proj.siped.c6">Gestão de cursos e eixos tecnológicos</li>
+                <li data-i18n="proj.siped.c7">Planejamento de evolução arquitetural</li>
+              </ul>
+              <h4 class="case__sub" data-i18n="case.analysis">Análise de dados</h4>
+              <p class="case__text" data-i18n="proj.siped.analysis">Auditoria de uma base importada, identificação de títulos duplicados após normalização e levantamento de pendências de dados — diagnósticos feitos em um momento específico para orientar as correções.</p>
+              <h4 class="case__sub" data-i18n="case.proposal">Proposta arquitetural</h4>
+              <p class="case__callout" data-i18n="proj.siped.proposal">Três ambientes operacionais, um Back-end compartilhado e um banco de dados centralizado. Trata-se de uma proposta de evolução, não de uma implementação concluída.</p>
+              <p class="case__note" data-i18n="proj.siped.note">Por se tratar de um sistema institucional, código, telas e dados internos não são divulgados.</p>
+            </div>
+          </article>
+
+          <!-- 3. Luedal -->
+          <article class="card project project--featured project--personal reveal spotlight" data-tags="fullstack personal" aria-labelledby="p-luedal">
+            <div class="project__visual" aria-hidden="true">
+              <span class="project__status mono" data-i18n="proj.luedal.status">Em desenvolvimento</span>
+              <svg class="viz viz--graph" viewBox="10 10 375 210" preserveAspectRatio="xMidYMid meet">
+                <g class="viz__edges">
+                  <path d="M60 160 L130 100 L210 130 L280 70 L350 110"/>
+                  <path d="M130 100 L150 40"/><path d="M210 130 L200 190"/><path d="M280 70 L320 30"/>
+                  <path d="M130 100 L210 130"/><path d="M60 160 L120 190"/><path d="M280 70 L350 160"/>
+                </g>
+                <path class="viz__route" d="M60 160 L130 100 L210 130 L280 70 L350 110"/>
+                <g class="viz__nodes">
+                  <circle cx="150" cy="40" r="5"/><circle cx="200" cy="190" r="5"/><circle cx="320" cy="30" r="5"/>
+                  <circle cx="120" cy="190" r="5"/><circle cx="350" cy="160" r="5"/>
+                </g>
+                <g class="viz__nodes viz__nodes--on">
+                  <circle cx="60" cy="160" r="7"/><circle cx="130" cy="100" r="7"/><circle cx="210" cy="130" r="7"/><circle cx="280" cy="70" r="7"/>
+                </g>
+                <circle class="viz__goal" cx="350" cy="110" r="10"/>
+                <text x="350" y="138" class="viz__label" text-anchor="middle">Career GPS</text>
+                <text x="60" y="186" class="viz__label" text-anchor="middle">Skill Graph</text>
+              </svg>
+            </div>
+            <div class="project__body">
+              <ul class="project__meta">
+                <li class="badge badge--personal" data-i18n="badge.personal">Pessoal</li>
+                <li class="badge badge--mode" data-i18n="badge.solo">Individual</li>
+                <li class="project__period mono" data-i18n="proj.luedal.period">2026 — em desenvolvimento</li>
+              </ul>
+              <p class="project__cat mono" data-i18n="proj.luedal.cat">SaaS de desenvolvimento de carreira</p>
+              <h3 class="project__title" id="p-luedal">Luedal</h3>
+              <p class="project__desc" data-i18n="proj.luedal.desc">Plataforma para ajudar profissionais a identificar competências e lacunas de conhecimento e a planejar a carreira. Projeto que conduzo sozinho, por iniciativa própria — da concepção à documentação e ao código.</p>
+              <ul class="kpis kpis--inline">
+                <li class="kpi"><span class="kpi__value">11</span><span class="kpi__label" data-i18n="proj.luedal.k1">módulos funcionais documentados</span></li>
+                <li class="kpi"><span class="kpi__value">46</span><span class="kpi__label" data-i18n="proj.luedal.k2">histórias de usuário</span></li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                <li>TypeScript</li><li>React</li><li>TanStack Start</li><li>Vite</li><li>Supabase</li><li>PostgreSQL</li>
+              </ul>
+              <button class="btn btn--sm btn--ghost project__more" type="button" data-case="luedal">
+                <span data-i18n="proj.more">Ver estudo de caso</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              </button>
+            </div>
+            <div class="case" id="case-luedal" hidden>
+              <dl class="case__meta">
+                <div><dt data-i18n="case.type">Tipo</dt><dd data-i18n="badge.personal">Pessoal</dd></div>
+                <div><dt data-i18n="case.mode">Trabalho</dt><dd data-i18n="badge.solo">Individual</dd></div>
+                <div><dt data-i18n="case.period">Período</dt><dd data-i18n="proj.luedal.period">2026 — em desenvolvimento</dd></div>
+              </dl>
+              <dl class="case__grid">
+                <div><dt data-i18n="case.problem">Problema</dt><dd data-i18n="proj.luedal.problem">Profissionais têm dificuldade em identificar as próprias competências, enxergar lacunas de conhecimento e transformar isso em um plano de carreira.</dd></div>
+                <div><dt data-i18n="case.scope">Escopo do produto</dt><dd data-i18n="proj.luedal.scope">Skill Graph, Career GPS, mapeamento de competências, registro de evidências profissionais, dashboard personalizado e assistente de inteligência artificial.</dd></div>
+              </dl>
+              <h4 class="case__sub" data-i18n="case.contribution">Minha contribuição</h4>
+              <p class="case__text" data-i18n="proj.luedal.contribIntro">Projeto pessoal e individual — todas as frentes abaixo são conduzidas por mim:</p>
+              <ul class="case__list">
+                <li data-i18n="proj.luedal.c1">Concepção e evolução do produto</li>
+                <li data-i18n="proj.luedal.c2">Levantamento de requisitos</li>
+                <li data-i18n="proj.luedal.c3">Organização das regras de negócio</li>
+                <li data-i18n="proj.luedal.c4">Análise de arquitetura</li>
+                <li data-i18n="proj.luedal.c5">Documentação técnica</li>
+                <li data-i18n="proj.luedal.c6">Avaliação de segurança</li>
+                <li data-i18n="proj.luedal.c7">Planejamento da evolução tecnológica</li>
+                <li data-i18n="proj.luedal.c8">Desenvolvimento e manutenção da solução</li>
+              </ul>
+              <h4 class="case__sub" data-i18n="case.results">Resultados</h4>
+              <ul class="kpis">
+                <li class="kpi"><span class="kpi__value">11</span><span class="kpi__label" data-i18n="proj.luedal.k1">módulos funcionais documentados</span></li>
+                <li class="kpi"><span class="kpi__value">46</span><span class="kpi__label" data-i18n="proj.luedal.k2">histórias de usuário</span></li>
+              </ul>
+              <p class="case__text" data-i18n="proj.luedal.results">Além disso: contratos de integração e análise das regras de negócio e das responsabilidades arquiteturais.</p>
+              <p class="case__note" data-i18n="proj.luedal.note">Projeto em desenvolvimento — não é um produto comercial lançado.</p>
+              <h4 class="case__sub" data-i18n="common.techs">Tecnologias</h4>
+              <ul class="chips"><li>TypeScript</li><li>React</li><li>TanStack Start</li><li>Vite</li><li>Supabase</li><li>PostgreSQL</li></ul>
+            </div>
+          </article>
+
+          <!-- 4. Brazil Fund Access -->
+          <article class="card project reveal spotlight" data-tags="fullstack work" aria-labelledby="p-bfa">
+            <div class="project__visual" aria-hidden="true">
+              <svg class="viz viz--layers" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet">
+                <g class="viz__layer"><rect x="70" y="20" width="260" height="46" rx="10"/><text x="90" y="49">client</text><text x="310" y="49" text-anchor="end" class="viz__dim">React · Vite</text></g>
+                <path class="viz__link" d="M200 66 V87"/>
+                <g class="viz__layer viz__layer--on"><rect x="70" y="87" width="260" height="46" rx="10"/><text x="90" y="116">api</text><text x="310" y="116" text-anchor="end" class="viz__dim">Node · TS · Express</text></g>
+                <path class="viz__link" d="M200 133 V154"/>
+                <g class="viz__layer"><rect x="70" y="154" width="260" height="46" rx="10"/><text x="90" y="183">db</text><text x="310" y="183" text-anchor="end" class="viz__dim">PostgreSQL</text></g>
+              </svg>
+            </div>
+            <div class="project__body">
+              <ul class="project__meta">
+                <li class="badge badge--professional" data-i18n="badge.professional">Profissional</li>
+                <li class="badge badge--mode" data-i18n="badge.collab">Colaborativo</li>
+                <li class="project__period mono" data-i18n="proj.bfa.period">Mai — Jun 2026</li>
+              </ul>
+              <p class="project__cat mono" data-i18n="proj.bfa.cat">Fintech · Residência tecnológica</p>
+              <h3 class="project__title" id="p-bfa">Brazil Fund Access</h3>
+              <p class="project__desc" data-i18n="proj.bfa.desc">MVP de uma plataforma de captação e gestão de investimentos internacionais, desenvolvido durante a residência na LOØR.</p>
+              <ul class="kpis kpis--inline">
+                <li class="kpi"><span class="kpi__value">30+</span><span class="kpi__label" data-i18n="proj.bfa.k1">telas e fluxos com minha contribuição</span></li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                <li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li>
+              </ul>
+              <button class="btn btn--sm btn--ghost project__more" type="button" data-case="bfa">
+                <span data-i18n="proj.more">Ver estudo de caso</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              </button>
+            </div>
+            <div class="case" id="case-bfa" hidden>
+              <dl class="case__meta">
+                <div><dt data-i18n="case.type">Tipo</dt><dd data-i18n="badge.professional">Profissional</dd></div>
+                <div><dt data-i18n="case.mode">Trabalho</dt><dd data-i18n="badge.collab">Colaborativo</dd></div>
+                <div><dt data-i18n="case.period">Período</dt><dd data-i18n="proj.bfa.period">Mai — Jun 2026</dd></div>
+              </dl>
+              <dl class="case__grid">
+                <div><dt data-i18n="case.context">Contexto</dt><dd data-i18n="proj.bfa.context">MVP desenvolvido durante a Residência Tecnológica do programa Bolsa Futuro Digital, na LOØR Venture Capital.</dd></div>
+                <div><dt data-i18n="case.solution">Solução</dt><dd data-i18n="proj.bfa.solution">Plataforma de captação e gestão de investimentos internacionais, com Front-end em React e API em Node.js, TypeScript e Express sobre PostgreSQL.</dd></div>
+              </dl>
+              <h4 class="case__sub" data-i18n="case.contribution">Minha contribuição</h4>
+              <ul class="case__list">
+                <li data-i18n="proj.bfa.c1">Desenvolvimento Full Stack</li>
+                <li data-i18n="proj.bfa.c2">Construção de APIs REST</li>
+                <li data-i18n="proj.bfa.c3">Modelagem de dados</li>
+                <li data-i18n="proj.bfa.c4">Implementação de autenticação</li>
+                <li data-i18n="proj.bfa.c5">Implementação de fluxos de KYC</li>
+                <li data-i18n="proj.bfa.c6">Integração entre Front-end e Back-end</li>
+                <li data-i18n="proj.bfa.c7">Participação em homologação, CI/CD e deploy</li>
+              </ul>
+              <h4 class="case__sub" data-i18n="case.results">Resultados</h4>
+              <ul class="kpis">
+                <li class="kpi"><span class="kpi__value">30+</span><span class="kpi__label" data-i18n="proj.bfa.k1">telas e fluxos com minha contribuição</span></li>
+              </ul>
+              <p class="case__note" data-i18n="proj.bfa.note">Trabalho em equipe: o número indica telas e fluxos para os quais contribuí, não que eu os tenha desenvolvido sozinho. Informações financeiras, comerciais e proprietárias da plataforma não são divulgadas.</p>
+              <h4 class="case__sub" data-i18n="common.techs">Tecnologias</h4>
+              <ul class="chips"><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Node.js</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li></ul>
+            </div>
+          </article>
+
+          <!-- 5. API de Gestão de Entregas -->
+          <article class="card project reveal spotlight" data-tags="backend learning" aria-labelledby="p-api">
+            <div class="project__visual project__visual--type" aria-hidden="true">
+              <p class="big-number">40<span>+</span></p>
+              <p class="big-number__label mono">endpoints</p>
+              <ul class="verbs mono">
+                <li class="v-get">REST</li><li class="v-post">JWT</li><li class="v-patch">SQL</li>
+              </ul>
+            </div>
+            <div class="project__body">
+              <ul class="project__meta">
+                <li class="badge badge--academic" data-i18n="badge.academic">Acadêmico</li>
+                <li class="project__period mono">2025 — 2026</li>
+              </ul>
+              <p class="project__cat mono" data-i18n="proj.api.cat">Formação técnica · API REST</p>
+              <h3 class="project__title" id="p-api" data-i18n="proj.api.title">API de Gestão de Entregas</h3>
+              <p class="project__desc" data-i18n="proj.api.desc">API REST para gerenciamento de entregas e operações logísticas, com autenticação JWT, modelagem de dados e integração com banco de dados.</p>
+              <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                <li>Node.js</li><li>Express</li><li>Sequelize</li><li>SQL</li><li>JWT</li>
+              </ul>
+              <button class="btn btn--sm btn--ghost project__more" type="button" data-case="api">
+                <span data-i18n="proj.more">Ver estudo de caso</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              </button>
+            </div>
+            <div class="case" id="case-api" hidden>
+              <dl class="case__meta">
+                <div><dt data-i18n="case.type">Tipo</dt><dd data-i18n="badge.academicLong">Acadêmico — formação técnica</dd></div>
+                <div><dt data-i18n="case.period">Período</dt><dd>2025 — 2026</dd></div>
+              </dl>
+              <dl class="case__grid">
+                <div><dt data-i18n="case.problem">Problema</dt><dd data-i18n="proj.api.problem">Gerenciar entregas e operações logísticas por meio de uma API organizada e protegida por autenticação.</dd></div>
+                <div><dt data-i18n="case.solution">Solução</dt><dd data-i18n="proj.api.solution">API REST em Node.js e Express, com persistência via Sequelize e autenticação com JWT.</dd></div>
+              </dl>
+              <h4 class="case__sub" data-i18n="case.highlights">Destaques técnicos</h4>
+              <ul class="case__list">
+                <li data-i18n="proj.api.c1">Desenvolvimento Back-end</li>
+                <li data-i18n="proj.api.c2">Estruturação de endpoints</li>
+                <li data-i18n="proj.api.c3">Modelagem de dados</li>
+                <li data-i18n="proj.api.c4">Autenticação com JWT</li>
+                <li data-i18n="proj.api.c5">Organização das responsabilidades da aplicação</li>
+                <li data-i18n="proj.api.c6">Integração com banco de dados</li>
+              </ul>
+              <h4 class="case__sub" data-i18n="case.results">Resultados</h4>
+              <ul class="kpis">
+                <li class="kpi"><span class="kpi__value">40+</span><span class="kpi__label" data-i18n="proj.api.k1">endpoints na API</span></li>
+              </ul>
+              <h4 class="case__sub" data-i18n="common.techs">Tecnologias</h4>
+              <ul class="chips"><li>Node.js</li><li>Express</li><li>Sequelize</li><li>SQL</li><li>JWT</li></ul>
+            </div>
+          </article>
+
+          <!-- 6. NextPath -->
+          <article class="card project reveal spotlight" data-tags="fullstack learning" aria-labelledby="p-nextpath">
+            <div class="project__visual" aria-hidden="true">
+              <svg class="viz viz--path" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet">
+                <path class="viz__track" d="M30 180 C 110 180, 100 110, 180 110 S 260 40, 360 40"/>
+                <path class="viz__route" d="M30 180 C 110 180, 100 110, 180 110 S 260 40, 360 40"/>
+                <circle class="viz__milestone" cx="30" cy="180" r="7"/>
+                <circle class="viz__milestone" cx="180" cy="110" r="7"/>
+                <circle class="viz__goal" cx="360" cy="40" r="10"/>
+                <text x="30" y="206" class="viz__label" text-anchor="middle">now</text>
+                <text x="360" y="76" class="viz__label" text-anchor="middle">next</text>
+              </svg>
+            </div>
+            <div class="project__body">
+              <ul class="project__meta">
+                <li class="badge badge--hackathon">Hackathon</li>
+                <li class="badge badge--mode" data-i18n="badge.collab">Colaborativo</li>
+                <li class="project__period mono" data-i18n="proj.next.period">Set 2026</li>
+              </ul>
+              <p class="project__cat mono" data-i18n="proj.next.cat">Carreira · Full Stack</p>
+              <h3 class="project__title" id="p-nextpath">NextPath</h3>
+              <p class="project__desc" data-i18n="proj.next.desc">Solução digital voltada ao desenvolvimento e ao direcionamento de carreira, construída em equipe durante um hackathon.</p>
+              <ul class="chips" aria-label="Tecnologias" data-i18n-attr="aria-label:common.techs">
+                <li>Vue.js</li><li>Laravel</li>
+              </ul>
+              <button class="btn btn--sm btn--ghost project__more" type="button" data-case="nextpath">
+                <span data-i18n="proj.more">Ver estudo de caso</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              </button>
+            </div>
+            <div class="case" id="case-nextpath" hidden>
+              <dl class="case__meta">
+                <div><dt data-i18n="case.type">Tipo</dt><dd>Hackathon</dd></div>
+                <div><dt data-i18n="case.mode">Trabalho</dt><dd data-i18n="badge.collab">Colaborativo</dd></div>
+                <div><dt data-i18n="case.period">Período</dt><dd data-i18n="proj.next.periodLong">Setembro de 2026</dd></div>
+              </dl>
+              <dl class="case__grid">
+                <div><dt data-i18n="case.context">Contexto</dt><dd data-i18n="proj.next.context">Projeto colaborativo desenvolvido em um hackathon, com o desafio de construir uma solução digital em equipe dentro do formato da competição.</dd></div>
+                <div><dt data-i18n="case.solution">Solução</dt><dd data-i18n="proj.next.solution">Plataforma voltada ao desenvolvimento e ao direcionamento de carreira profissional, construída com Vue.js e Laravel.</dd></div>
+              </dl>
+              <h4 class="case__sub" data-i18n="case.experience">A experiência</h4>
+              <p class="case__text" data-i18n="proj.next.experience">Desenvolvimento em equipe, ideação e construção rápida de uma solução digital — um exercício de colaboração e inovação sob o ritmo de um hackathon.</p>
+              <h4 class="case__sub" data-i18n="common.techs">Tecnologias</h4>
+              <ul class="chips"><li>Vue.js</li><li>Laravel</li></ul>
+            </div>
+          </article>
+
+          <a class="card project-cta reveal spotlight" href="https://github.com/LucasLeal0619" target="_blank" rel="noopener noreferrer">
+            <svg class="icon project-cta__logo" aria-hidden="true"><use href="#i-github"/></svg>
+            <span class="project-cta__body">
+              <span class="project__cat mono">github.com/LucasLeal0619</span>
+              <span class="project-cta__title" data-i18n="proj.cta.title">Perfil no GitHub</span>
+              <span class="project-cta__text" data-i18n="proj.cta.text">Repositórios públicos e estudos. Os projetos acima são apresentados como estudos de caso, sem expor código institucional ou profissional.</span>
+            </span>
+            <svg class="icon project-cta__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+            <span class="sr-only" data-i18n="a11y.newTab">(abre em nova aba)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPETÊNCIAS ============ -->
+    <section class="section" id="competencias" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__index mono">04 <span aria-hidden="true">/</span> <span data-i18n="nav.skills">Competências</span></p>
+          <h2 class="section__title" id="skills-title" data-i18n="skills.title">Ferramentas, em contexto.</h2>
+          <p class="section__lead" data-i18n="skills.lead">Organizadas por categoria, sem barras de porcentagem. Quando confirmado, cada tecnologia mostra onde foi utilizada.</p>
+        </header>
+
+        <div class="skills">
+          <article class="card skill-card reveal spotlight">
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-server"/></svg></span>
+              <h3>Back-end</h3>
+            </header>
+            <ul class="spec">
+              <li class="spec__row"><span>Node.js</span><span class="spec__ctx" data-i18n="skills.ctx.node">LOØR · Residência</span></li>
+              <li class="spec__row"><span>TypeScript</span><span class="spec__ctx" data-i18n="skills.ctx.ts">LOØR · Residência · Luedal</span></li>
+              <li class="spec__row"><span>JavaScript</span><span class="spec__ctx" data-i18n="skills.ctx.js">LOØR · G4F/Senac-DF</span></li>
+              <li class="spec__row"><span>PHP</span><span class="spec__ctx">G4F/Senac-DF · HackLab</span></li>
+              <li class="spec__row"><span>Laravel</span><span class="spec__ctx">G4F/Senac-DF · HackLab · NextPath</span></li>
+              <li class="spec__row"><span>Express</span><span class="spec__ctx" data-i18n="skills.ctx.express">Brazil Fund Access · API de Entregas</span></li>
+              <li class="spec__row"><span>AdonisJS</span><span class="spec__ctx">LOØR</span></li>
+              <li class="spec__row"><span>NestJS</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.rest">APIs REST</span></span><span class="spec__ctx" data-i18n="skills.ctx.rest">LOØR · Residência · API de Entregas</span></li>
+              <li class="spec__row"><span>Webhooks</span><span class="spec__ctx" data-i18n="skills.ctx.webhooks">LOØR (Asaas)</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.integrations">Integrações entre sistemas</span></span><span class="spec__ctx">Asaas · BigDataCorp</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal spotlight">
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-layout"/></svg></span>
+              <h3>Front-end</h3>
+            </header>
+            <ul class="spec">
+              <li class="spec__row"><span>Vue.js</span><span class="spec__ctx">G4F/Senac-DF · HackLab · NextPath</span></li>
+              <li class="spec__row"><span>React</span><span class="spec__ctx" data-i18n="skills.ctx.react">Residência · Luedal</span></li>
+              <li class="spec__row"><span>JavaScript</span><span class="spec__ctx">G4F/Senac-DF</span></li>
+              <li class="spec__row"><span>HTML5</span></li>
+              <li class="spec__row"><span>CSS3</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal spotlight">
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-db"/></svg></span>
+              <h3 data-i18n="skills.db">Banco de dados</h3>
+            </header>
+            <ul class="spec">
+              <li class="spec__row"><span>PostgreSQL</span><span class="spec__ctx" data-i18n="skills.ctx.pg">LOØR · Residência · HackLab</span></li>
+              <li class="spec__row"><span>MySQL</span><span class="spec__ctx">G4F/Senac-DF</span></li>
+              <li class="spec__row"><span>SQL</span><span class="spec__ctx" data-i18n="skills.ctx.sql">LOØR · API de Entregas</span></li>
+              <li class="spec__row"><span>Supabase</span><span class="spec__ctx">HackLab · Luedal</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal spotlight">
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-branch"/></svg></span>
+              <h3 data-i18n="skills.infra">Infraestrutura e ferramentas</h3>
+            </header>
+            <ul class="spec">
+              <li class="spec__row"><span>Git</span><span class="spec__ctx">LOØR · G4F/Senac-DF</span></li>
+              <li class="spec__row"><span>Docker</span><span class="spec__ctx">G4F/Senac-DF</span></li>
+              <li class="spec__row"><span>CI/CD</span><span class="spec__ctx" data-i18n="skills.ctx.cicd">Residência · HackLab</span></li>
+              <li class="spec__row"><span>OpenAPI / Swagger</span><span class="spec__ctx">LOØR</span></li>
+              <li class="spec__row"><span>GitHub</span></li>
+              <li class="spec__row"><span>GitHub Actions</span></li>
+              <li class="spec__row"><span>Postman</span></li>
+              <li class="spec__row"><span>Linux</span></li>
+              <li class="spec__row"><span>AWS</span><span class="spec__ctx">AWS Academy</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal spotlight">
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>
+              <h3 data-i18n="skills.eng">Engenharia de software</h3>
+            </header>
+            <ul class="spec">
+              <li class="spec__row"><span><span data-i18n="skills.auth">Autenticação</span></span><span class="spec__ctx" data-i18n="skills.ctx.auth">Residência · G4F/Senac-DF · HackLab</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.security">Segurança</span></span><span class="spec__ctx" data-i18n="skills.ctx.security">LOØR (KYC) · HackLab</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.review">Revisão de código</span></span><span class="spec__ctx">LOØR</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.tests">Testes</span></span><span class="spec__ctx">LOØR · HackLab</span></li>
+              <li class="spec__row"><span>Troubleshooting</span><span class="spec__ctx">LOØR · G4F/Senac-DF</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.staging">Homologação</span></span><span class="spec__ctx" data-i18n="skills.ctx.deploy">LOØR · Residência</span></li>
+              <li class="spec__row"><span>Deploy</span><span class="spec__ctx" data-i18n="skills.ctx.deploy">LOØR · Residência</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.arch">Arquitetura de software</span></span><span class="spec__ctx" data-i18n="skills.ctx.arch">Luedal · SIPED (proposta)</span></li>
+              <li class="spec__row"><span><span data-i18n="skills.docs">Documentação técnica</span></span><span class="spec__ctx">LOØR · Luedal</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMAÇÃO ============ -->
+    <section class="section" id="formacao" aria-labelledby="edu-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__index mono">05 <span aria-hidden="true">/</span> <span data-i18n="nav.education">Formação</span></p>
+          <h2 class="section__title" id="edu-title" data-i18n="edu.title">Formação acadêmica.</h2>
+        </header>
+
+        <ol class="timeline timeline--edu">
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"><span></span></div>
+            <article class="card edu-card spotlight">
+              <div class="edu-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></div>
+              <div class="edu-card__body">
+                <p class="exp-card__org">Faculdade Senac-DF</p>
+                <h3 class="exp-card__role" data-i18n="edu.ads">Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                <p class="edu-card__meta mono">
+                  <span class="tag-current" data-i18n="edu.inProgress">Em andamento</span>
+                  <span>· 2026 — <span data-i18n="edu.adsEnd">previsão dez 2027</span></span>
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"><span></span></div>
+            <article class="card edu-card spotlight">
+              <div class="edu-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></div>
+              <div class="edu-card__body">
+                <p class="exp-card__org" data-i18n="edu.ifbOrg">Instituto Federal de Brasília (IFB) — Campus Brasília</p>
+                <h3 class="exp-card__role" data-i18n="edu.ifb">Ensino Médio integrado ao Técnico em Informática</h3>
+                <p class="edu-card__meta mono">
+                  <span class="tag-done" data-i18n="edu.done">Concluído</span>
+                  <span>· <time datetime="2023-03" data-i18n="edu.mar23">Mar 2023</time> — <time datetime="2025-12" data-i18n="edu.dec25">Dez 2025</time></span>
+                </p>
+              </div>
+            </article>
+          </li>
+          <!--
+            Modelo para futuras formações (graduação, pós, especialização).
+            Copie o bloco <li class="timeline__item reveal">…</li> acima, ajuste os textos
+            e adicione as chaves de tradução correspondentes em js/translations.js.
+          -->
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CREDENCIAIS ============ -->
+    <section class="section" id="credenciais" aria-labelledby="cred-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__index mono">06 <span aria-hidden="true">/</span> <span data-i18n="nav.credentials">Credenciais</span></p>
+          <h2 class="section__title" id="cred-title" data-i18n="cred.title">Credenciais e formação complementar.</h2>
+          <p class="section__lead" data-i18n="cred.lead">Os selos da AWS Academy comprovam a conclusão de cursos acadêmicos. Não são certificações profissionais AWS obtidas por exame.</p>
+        </header>
+
+        <ul class="creds">
+          <li class="card cred-card reveal spotlight">
+            <p class="badge badge--study" data-i18n="cred.typeBadge">Selo de curso · AWS Academy</p>
+            <h3 class="cred-card__title">AWS Academy Graduate — Cloud Architecting</h3>
+            <p class="cred-card__meta mono"><span data-i18n="cred.issuedBy">Emitido por</span> Amazon Web Services Training and Certification · <time datetime="2025-11" data-i18n="cred.nov25">Nov 2025</time></p>
+            <a class="cred-card__link" href="https://www.credly.com/badges/780c78b6-8be4-4b17-b005-ce69655f09c8" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="cred.verify">Verificar no Credly</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              <span class="sr-only" data-i18n="a11y.newTab">(abre em nova aba)</span>
+            </a>
+          </li>
+          <li class="card cred-card reveal spotlight">
+            <p class="badge badge--study" data-i18n="cred.typeBadge">Selo de curso · AWS Academy</p>
+            <h3 class="cred-card__title">AWS Academy Graduate — Cloud Foundations</h3>
+            <p class="cred-card__meta mono"><span data-i18n="cred.issuedBy">Emitido por</span> Amazon Web Services Training and Certification · <time datetime="2025-10" data-i18n="cred.oct25">Out 2025</time></p>
+            <a class="cred-card__link" href="https://www.credly.com/badges/e8bd3562-819b-45bc-aad5-487b95e1ea8e" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="cred.verify">Verificar no Credly</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+              <span class="sr-only" data-i18n="a11y.newTab">(abre em nova aba)</span>
+            </a>
+          </li>
+          <li class="card cred-card reveal spotlight">
+            <p class="badge badge--professional" data-i18n="cred.typeResidency">Programa de residência</p>
+            <h3 class="cred-card__title" data-i18n="cred.residency">Residência Tecnológica — Bolsa Futuro Digital</h3>
+            <p class="cred-card__meta mono">LOØR Venture Capital · <span data-i18n="cred.residencyPeriod">Abr — Jul 2026</span></p>
+          </li>
+          <li class="card cred-card reveal spotlight">
+            <p class="badge badge--institutional" data-i18n="cred.typeCourse">Formação complementar</p>
+            <h3 class="cred-card__title" data-i18n="cred.course">Formação em Desenvolvimento Back-end (Node.js)</h3>
+            <p class="cred-card__meta mono">Bolsa Futuro Digital</p>
+          </li>
+        </ul>
+        <a class="btn btn--ghost btn--sm creds__all reveal" href="https://www.credly.com/users/lucas-leal.0b1dd383/badges" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="cred.all">Perfil completo no Credly</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+          <span class="sr-only" data-i18n="a11y.newTab">(abre em nova aba)</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="card contact reveal">
+          <div class="contact__bg" aria-hidden="true"></div>
+          <p class="section__index mono">07 <span aria-hidden="true">/</span> <span data-i18n="nav.contact">Contato</span></p>
+          <h2 class="contact__title" id="contact-title" data-i18n="contact.title">Vamos conversar?</h2>
+          <p class="contact__lead" data-i18n="contact.lead">Se você tem uma vaga, um projeto ou uma ideia em que eu possa contribuir, será um prazer conversar.</p>
+          <p class="contact__location mono">Brasília, DF · Brasil</p>
+
+          <div class="contact__actions">
+            <div class="email-group" data-config-wrap="email" hidden>
+              <a class="btn btn--primary" href="#" data-config-link="email">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <span data-config-text="email"></span>
+              </a>
+              <button class="icon-btn copy-btn" type="button" id="copy-email" aria-label="Copiar e-mail" data-i18n-attr="aria-label:contact.copy">
+                <svg class="icon icon--copy" aria-hidden="true"><use href="#i-copy"/></svg>
+                <svg class="icon icon--check" aria-hidden="true"><use href="#i-check"/></svg>
+              </button>
+            </div>
+            <a class="btn btn--ghost" href="#" data-config-link="linkedin" target="_blank" rel="noopener noreferrer" hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+              LinkedIn
+              <span class="sr-only" data-i18n="a11y.newTab">(abre em nova aba)</span>
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/LucasLeal0619" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+              GitHub
+              <span class="sr-only" data-i18n="a11y.newTab">(abre em nova aba)</span>
+            </a>
+            <a class="btn btn--ghost" href="#" data-config-link="resume" download hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              <span data-i18n="contact.resume">Currículo (PDF)</span>
+            </a>
+          </div>
+          <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand"><span class="brand__mark" aria-hidden="true">LL</span> Lucas Eduardo Ferreira Leal</p>
+      <p class="footer__note mono"><span data-i18n="footer.built">Feito à mão com HTML, CSS e JavaScript — sem frameworks.</span> © <span id="year">2026</span></p>
+      <a class="footer__top" href="#inicio">
+        <span data-i18n="footer.top">Voltar ao topo</span>
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" id="to-top" aria-label="Voltar ao topo" data-i18n-attr="aria-label:footer.top" hidden>
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </button>
+
+  <!-- Modal de estudo de caso (conteúdo clonado de .case) -->
+  <dialog class="modal" id="case-modal" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <header class="modal__head">
+        <div>
+          <p class="modal__cat mono" id="modal-cat"></p>
+          <h2 class="modal__title" id="modal-title"></h2>
+        </div>
+        <button class="icon-btn" type="button" data-close aria-label="Fechar" data-i18n-attr="aria-label:common.close">
+          <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </header>
+      <div class="modal__body" id="modal-body"></div>
+    </div>
+  </dialog>
+</body>
+</html>

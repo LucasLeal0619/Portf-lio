@@ -1,0 +1,190 @@
+/* ==========================================================================
+   responsive.css — ajustes por faixa de tela
+   Base: desktop (1024–1440px). Ajustes para cima (ultrawide) e para baixo.
+   ========================================================================== */
+
+/* ---------- Telas amplas / ultrawide ---------- */
+@media (min-width: 1600px) {
+  :root { --container: 1320px; }
+  html { font-size: 17px; }
+}
+@media (min-width: 2200px) {
+  :root { --container: 1440px; }
+  html { font-size: 18px; }
+}
+
+/* ---------- Notebooks menores: menu recolhido (7 itens não cabem) ---------- */
+@media (max-width: 1100px) {
+  .hero__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr); }
+  .js .menu-btn { display: inline-grid; }
+
+  .js .nav {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    padding: var(--space-3) var(--gutter) var(--space-5);
+    background: color-mix(in srgb, var(--bg) 96%, transparent);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    display: none;
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+  }
+  .js .nav.is-open { display: block; animation: menu-in 0.25s var(--ease-out); }
+  .js .nav__list { flex-direction: column; align-items: stretch; gap: 2px; }
+  .js .nav__link { padding: 14px 12px; font-size: var(--fs-md); border-radius: 10px; }
+  .js .nav__link.is-active { background: var(--surface-2); }
+  .js .nav__link.is-active::after { left: auto; right: 14px; bottom: 50%; transform: translateY(50%); width: 6px; height: 6px; }
+
+  /* Sem JS: o menu continua acessível, rolando horizontalmente */
+  html:not(.js) .header { height: auto; }
+  html:not(.js) .header__inner { flex-wrap: wrap; padding-block: 12px; }
+  html:not(.js) .nav { order: 3; width: 100%; overflow-x: auto; }
+  .traits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 920px) {
+
+  .hero__grid { grid-template-columns: minmax(0, 1fr); }
+  .hero__visual {
+    justify-self: stretch;
+    max-width: none;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: stretch;
+  }
+  .photo-card { flex-direction: column; justify-content: center; text-align: center; }
+
+  .about-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about-main { grid-column: 1 / -1; grid-row: auto; }
+
+  .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project,
+  .projects.is-filtered .project { grid-column: span 1; grid-row: auto; }
+  .project--featured { grid-column: 1 / -1; flex-direction: column; }
+  .projects.is-filtered .project--featured { grid-column: span 1; }
+  .project--featured .project__visual {
+    flex: none;
+    min-height: 0;
+    height: 240px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+
+  .exp-card__groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-cta,
+  .projects.is-filtered .project-cta { grid-column: span 1; }
+}
+
+/* ---------- Smartphones ---------- */
+@media (max-width: 640px) {
+  :root { --header-h: 60px; }
+
+  .brand__name {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+
+  .hero { padding-top: calc(var(--header-h) + 2.5rem); }
+  .status-pill { font-size: var(--fs-xs); margin-bottom: var(--space-5); }
+  .hero__lead { font-size: var(--fs-base); }
+  .hero__cta .btn { flex: 1 1 auto; }
+  .hero__cta .btn--primary { flex-basis: 100%; }
+  /* Foto antes do texto no celular; card de código depois */
+  .hero__grid { gap: var(--space-5); }
+  .hero__visual { display: contents; }
+  .photo-card { order: -1; padding: 0; background: none; border: 0; box-shadow: none; justify-content: flex-start; text-align: left; flex-direction: row; gap: var(--space-4); }
+  .photo-card::before { display: none; }
+  .photo-card picture { width: 88px; height: 88px; }
+  .photo-card__name { font-size: var(--fs-sm); }
+  .photo-card__img { border-color: var(--bg); }
+  .status-pill { margin-bottom: var(--space-4); }
+  .code-card { order: 1; }
+  .code-card__body { font-size: 0.75rem; padding: 14px 16px 16px; }
+  .code-card__path { font-size: 0.6875rem; }
+
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .about-main p:first-child { font-size: var(--fs-md); }
+  .about-main p { font-size: var(--fs-base); }
+
+  .timeline::before { left: 7px; }
+  .timeline__item { grid-template-columns: 16px minmax(0, 1fr); gap: 12px; }
+  .timeline__marker span { width: 15px; height: 15px; }
+  .timeline__marker span::after { inset: 4px; }
+  .exp-card__groups,
+  .exp-card__groups--2 { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .traits { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .creds { grid-template-columns: minmax(0, 1fr); }
+  .project__visual--report { padding: var(--space-5); }
+  .kpi { min-width: 0; }
+  .project-cta,
+  .projects.is-filtered .project-cta { grid-column: 1 / -1; }
+
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter { flex: none; scroll-snap-align: start; }
+
+  .projects { grid-template-columns: minmax(0, 1fr); }
+  .project,
+  .project--featured,
+  .projects.is-filtered .project,
+  .projects.is-filtered .project--featured { grid-column: 1 / -1; }
+  .project__visual { height: 170px; }
+  .project--featured .project__visual { height: 190px; }
+  .project-cta { flex-wrap: wrap; gap: var(--space-4); }
+  .project-cta__arrow { display: none; }
+
+  .skills { columns: 1; }
+  .spec__row { flex-wrap: wrap; gap: 2px var(--space-3); }
+  .spec__ctx { text-align: left; }
+
+  .edu-card { flex-direction: column; gap: var(--space-4); }
+
+  .contact__actions .btn { width: 100%; }
+  .email-group { width: 100%; }
+  .email-group .btn { flex: 1; min-width: 0; }
+  .email-group .btn span { overflow: hidden; text-overflow: ellipsis; }
+
+  .modal { width: calc(100% - 1rem); max-height: 92vh; border-radius: 16px; }
+  .case__grid,
+  .case__list { grid-template-columns: minmax(0, 1fr); }
+
+  .footer__inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- Telas muito estreitas ---------- */
+@media (max-width: 360px) {
+  .lang-btn .icon { display: none; }
+  .header__actions { gap: 6px; }
+}
+
+/* ---------- Dispositivos sem hover: sem efeitos que dependem do ponteiro ---------- */
+@media (hover: none) {
+  .spotlight::before { display: none; }
+  .project:hover .viz { transform: none; }
+}
+
+/* ---------- Impressão ---------- */
+@media print {
+  .header, .progress, .to-top, .filters, .project__more, .hero__bg, .contact__bg { display: none !important; }
+  .anim-ready .reveal { opacity: 1 !important; transform: none !important; }
+  .section { content-visibility: visible; }
+  body { background: #fff; color: #000; }
+}
+
+/* O relatório de testes (HackLab) precisa de altura automática em qualquer largura */
+@media (max-width: 920px) {
+  .project--featured .project__visual--report { height: auto; }
+}
